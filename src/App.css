@@ -167,6 +167,134 @@ body {
 
 
 
+@media (max-width: 900px) and (min-width: 521px) {
+    .hamburger {
+        display: none;
+    }
+
+    .Navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--main-bg-color);
+        /*padding: 0.3em;*/
+        border-radius: 0.5em;
+        border: 0.1em solid var(main-balck);
+        align-items: center;
+    }
+
+
+    .nav-items>ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    .brand-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand-logo>a {
+        text-decoration: none;
+    }
+
+    .nav-items>ul>li {
+        margin: 1em;
+        border: 0.15em solid var(--main-fg-color);
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+        color: var(--main-white);
+    }
+
+    .nav-items>ul>li:hover,
+    :focus {
+        color: var(--main-balck);
+        background-color: var(--main-fg-color);
+    }
+
+    .nav-items>ul>li>a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+        user-select: none;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .button {
+        color: var(--main-white);
+        width: 10em;
+        text-align: center;
+        margin: 1em;
+        border-radius: 0.5em;
+        padding: 0.5em 1em;
+        border: 0.15em solid var(--main-fg-color);
+        cursor: pointer;
+    }
+
+    .button> h3 > a{
+      color: var(--main-white);
+      text-decoration: none;
+    }
+
+    .button:hover,
+    :focus {
+        color: var(--main-balck);
+        background-color: var(--main-fg-color);
+    }
+
+    .login{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login > div{
+      display: flex;
+      margin: 2em 0em 0em 0em;
+      flex-direction: row;
+      border-radius: 1.5em;
+      border: 0.2em solid var(--main-fg-color);
+    }
+
+    .form, .sidebar {
+        width: 520px;
+        padding: 3em 0em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form{
+      border-right: 0.2em solid var(--main-fg-color);
+    }
+
+    .form>input {
+        width: 18em;
+        padding: 0.5em;
+        height: 3em;
+        text-align: center;
+        margin: 1em;
+        border: 0.1em solid var(--main-fg-color);
+        border-radius: 0.5em;
+    }
+
+}
+
+
+
+
+
+
+
+
 
 
 
