@@ -1,38 +1,312 @@
-.App {
-  text-align: center;
+:root {
+    box-sizing: border-box;
+    --main-fg-color: #00AAFF;
+    --main-bg-color: #010B10;
+    --main-white: #FFFFFF;
+    --main-balck: #000205;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.blue {
+    color: var(--main-fg-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.black {
+    color: var(--main-bg-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.white {
+    color: var(--main-white);
 }
 
-.App-link {
-  color: #61dafb;
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    background-color: var(--main-balck);
+}
+
+@media (min-width: 900px) {
+    .hamburger {
+        display: none;
+    }
+
+    .Navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--main-bg-color);
+        /*padding: 0.3em;*/
+        border-radius: 0.5em;
+        border: 0.1em solid var(main-balck);
+        align-items: center;
+    }
+
+
+    .nav-items>ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    .brand-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand-logo>a {
+        text-decoration: none;
+    }
+
+    .nav-items>ul>li {
+        margin: 1em;
+        border: 0.15em solid var(--main-fg-color);
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+        color: var(--main-white);
+    }
+
+    .nav-items>ul>li:hover,
+    :focus {
+        color: var(--main-balck);
+        background-color: var(--main-fg-color);
+    }
+
+    .nav-items>ul>li>a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+        user-select: none;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .button {
+        color: var(--main-white);
+        width: 10em;
+        text-align: center;
+        margin: 1em;
+        border-radius: 0.5em;
+        padding: 0.5em 1em;
+        border: 0.15em solid var(--main-fg-color);
+        cursor: pointer;
+    }
+
+    .button> h3 > a{
+      color: var(--main-white);
+      text-decoration: none;
+    }
+
+    .button:hover,
+    :focus {
+        color: var(--main-balck);
+        background-color: var(--main-fg-color);
+    }
+
+    .login{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login > div{
+      display: flex;
+      margin: 2em 0em 0em 0em;
+      flex-direction: row;
+      border-radius: 1.5em;
+      border: 0.2em solid var(--main-fg-color);
+    }
+
+    .form, .sidebar {
+        width: 520px;
+        padding: 3em 0em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form{
+      border-right: 0.2em solid var(--main-fg-color);
+    }
+
+    .form>input {
+        width: 18em;
+        padding: 0.5em;
+        height: 3em;
+        text-align: center;
+        margin: 1em;
+        border: 0.1em solid var(--main-fg-color);
+        border-radius: 0.5em;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*here is our mobile design */
+
+@media (min-width: 360px) and (max-width: 520px) {
+    .hamburger {
+        padding: 0.2em;
+        border: 0.15em solid var(--main-fg-color);
+        border-radius: 0.5em;
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger>div {
+        width: 2em;
+        height: 0.2em;
+        display: flex;
+        margin: 0.3em;
+        justify-content: space-around;
+        background-color: var(--main-white);
+        border-radius: 1em;
+    }
+
+    .hamburger:hover,
+    :focus {
+        background-color: var(--main-balck);
+        border-radius: 0.5em;
+    }
+
+    .mobile-nav {
+        display: none;
+        position: absolute;
+        background-color: var(--main-balck);
+        width: 100%;
+    }
+
+    .mobile-nav>ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        list-style: none;
+        display: block;
+        align-items: center;
+        height: 100%;
+    }
+
+    .Navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--main-bg-color);
+        padding: 0.5em;
+        border-radius: 0.5em;
+        border: 0.1em solid var(main-balck);
+        align-items: center;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .mobile-nav>ul>li {
+        margin: 3em;
+        border: 0.15em solid var(--main-fg-color);
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+        color: var(--main-white);
+        text-align: center;
+    }
+
+    .mobile-nav>ul>li:hover,
+    :focus {
+        color: var(--main-balck);
+        background-color: var(--main-fg-color);
+    }
+
+    .mobile-nav>ul>li>a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+    }
+
+    .form {
+        min-width: 360px;
+        max-width: 520px;
+        border: 0.2em solid var(--main-fg-color);
+        border-radius: 1.5em;
+        padding: 3em 0em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3em 1em;
+    }
+
+    .form>input {
+        width: 18em;
+        padding: 0.5em;
+        height: 3em;
+        text-align: center;
+        margin: 1em;
+        border: 0.2em solid var(--main-fg-color);
+        border-radius: 0.5em;
+        color: var(--main-balck);
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .button {
+        color: var(--main-white);
+        width: 10em;
+        text-align: center;
+        margin: 1em;
+        border-radius: 0.5em;
+        padding: 0.5em 1em;
+        border: 0.15em solid var(--main-fg-color);
+        cursor: pointer;
+    }
+
+    .button> h3 > a{
+      color: var(--main-white);
+      text-decoration: none;
+    }
+
+    .button:hover{
+      color: var(--main-balck);
+      background-color: var(--main-fg-color);
+    }
 }
