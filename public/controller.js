@@ -1,3 +1,5 @@
+
+
 $(document).ready(() => {
 
 	console.log("hello world")
@@ -12,4 +14,5 @@ $(document).ready(() => {
 	$('.mobile-nav > ul > li').on('click', ()=>{
 		$('.mobile-nav').hide("slow")
 	})
+
 })

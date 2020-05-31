@@ -3,7 +3,9 @@
     --main-fg-color: #00AAFF;
     --main-bg-color: #010B10;
     --main-white: #FFFFFF;
-    --main-balck: #000205;
+    --main-balck: #121212;
+    --sub-black: #000205;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .blue {
@@ -79,6 +81,7 @@ body {
         padding: 0.5em 1em;
         border-radius: 0.5em;
         color: var(--main-white);
+        transition: 0.3s;
     }
 
     .nav-items>ul>li:hover,
@@ -107,35 +110,38 @@ body {
         padding: 0.5em 1em;
         border: 0.15em solid var(--main-fg-color);
         cursor: pointer;
+        transition: 0.3s;
     }
 
-    .button> h3 > a{
-      color: var(--main-white);
-      text-decoration: none;
+    .button>h3>a {
+        color: var(--main-white);
+        text-decoration: none;
     }
 
     .button:hover,
     :focus {
-        color: var(--main-balck);
+        color: var(--sub-black);
         background-color: var(--main-fg-color);
     }
 
-    .login{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    .login > div{
-      display: flex;
-      margin: 2em 0em 0em 0em;
-      flex-direction: row;
-      border-radius: 1.5em;
-      border: 0.2em solid var(--main-fg-color);
+    .login>div {
+        display: flex;
+        margin: 2em 0em 0em 0em;
+        flex-direction: row;
+        border-radius: 1.5em;
+        border: 0.2em solid var(--main-fg-color);
+        background-color: var(--sub-black);
     }
 
-    .form, .sidebar {
+    .form,
+    .sidebar {
         width: 520px;
         padding: 3em 0em;
         display: flex;
@@ -144,8 +150,8 @@ body {
         align-items: center;
     }
 
-    .form{
-      border-right: 0.2em solid var(--main-fg-color);
+    .form {
+        border-right: 0.2em solid var(--main-fg-color);
     }
 
     .form>input {
@@ -154,8 +160,75 @@ body {
         height: 3em;
         text-align: center;
         margin: 1em;
-        border: 0.1em solid var(--main-fg-color);
+        border: 0.2em solid var(--main-fg-color);
         border-radius: 0.5em;
+    }
+
+    .event-card {
+        width: 350px;
+        border: 0.2em solid var(--main-fg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1em auto;
+        border-radius: 0.5em;
+        background-color: var(--sub-black);
+    }
+
+    .events {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .image-carousel {
+        display: flex;
+        width: 800px;
+        height: 500px;
+        transition: 0.5s;
+        border: 0.2em solid var(--main-fg-color);
+        margin: 1em auto;
+        border-radius: 0.8em;
+        box-shadow: 0.3em 0.3em 0.4em black;
+    }
+
+    .carousel-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-container>div.button {
+        width: 8em;
+        height: 3em;
+        box-shadow: 0.3em 0.3em 0.4em black;
+    }
+
+
+    /*these properties are related to carousel*/
+
+    .rec-arrow{
+      margin: 1em !important;
+    }
+
+    .rec-arrow:hover{
+      background-color: var(--main-fg-color) !important;
+    }
+
+    .rec-dot{
+      display: none;
+    }
+
+    .rec-carousel{
+      height: 530px !important;
+    }
+
+    .carousel-image{
+      width: 780px;
     }
 
 }
@@ -164,7 +237,7 @@ body {
 
 
 
-
+/*css for ipad*/
 
 
 @media (max-width: 900px) and (min-width: 521px) {
@@ -207,19 +280,22 @@ body {
         padding: 0.5em 1em;
         border-radius: 0.5em;
         color: var(--main-white);
+        transition: 0.3s;
     }
 
-    .nav-items>ul>li:hover,
-    :focus {
-        color: var(--main-balck);
-        background-color: var(--main-fg-color);
-    }
 
     .nav-items>ul>li>a {
         text-decoration: none;
         color: inherit;
         font-weight: bold;
         user-select: none;
+    }
+
+
+    .nav-items>ul>li:hover,
+    :focus {
+        color: var(--main-balck);
+        background-color: var(--main-fg-color);
     }
 
     .mobile-nav {
@@ -237,43 +313,17 @@ body {
         cursor: pointer;
     }
 
-    .button> h3 > a{
-      color: var(--main-white);
-      text-decoration: none;
-    }
-
-    .button:hover,
-    :focus {
-        color: var(--main-balck);
-        background-color: var(--main-fg-color);
-    }
-
-    .login{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .login > div{
-      display: flex;
-      margin: 2em 0em 0em 0em;
-      flex-direction: row;
-      border-radius: 1.5em;
-      border: 0.2em solid var(--main-fg-color);
-    }
-
-    .form, .sidebar {
-        width: 520px;
+    .form {
+        width: 720px;
+        border: 0.2em solid var(--main-fg-color);
+        border-radius: 1.5em;
         padding: 3em 0em;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    .form{
-      border-right: 0.2em solid var(--main-fg-color);
+        margin: 3em 1em;
+        background-color: var(--sub-black);
     }
 
     .form>input {
@@ -282,10 +332,119 @@ body {
         height: 3em;
         text-align: center;
         margin: 1em;
-        border: 0.1em solid var(--main-fg-color);
+        border: 0.2em solid var(--main-fg-color);
         border-radius: 0.5em;
+        color: var(--main-balck);
     }
 
+    .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .button {
+        color: var(--main-white);
+        width: 10em;
+        text-align: center;
+        margin: 1em;
+        border-radius: 0.5em;
+        padding: 0.5em 1em;
+        border: 0.15em solid var(--main-fg-color);
+        cursor: pointer;
+    }
+
+    .button>h3>a {
+        color: var(--main-white);
+        text-decoration: none;
+    }
+
+    .button:hover {
+        color: var(--main-balck);
+        background-color: var(--main-fg-color);
+    }
+
+    .event-card {
+        width: 350px;
+        border: 0.2em solid var(--main-fg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1em auto;
+        border-radius: 0.5em;
+        background-color: var(--sub-black);
+    }
+
+    .events {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .image-carousel {
+        display: flex;
+        width: 700px;
+        height: 400px;
+        transition: 0.5s;
+        border: 0.2em solid var(--main-fg-color);
+        margin: 1em auto;
+        border-radius: 0.8em;
+        box-shadow: 0.3em 0.3em 0.4em black;
+    }
+
+    .carousel-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-container>div.button {
+        width: 8em;
+        height: 3em;
+        box-shadow: 0.3em 0.3em 0.4em black;
+    }
+
+
+    /*these properties are related to carousel*/
+
+    .rec-arrow{
+      display: none;
+    }
+
+    .rec-dot_active{
+      box-shadow: 0 0 1px 3px var(--main-fg-color) !important;
+      background-color: var(--main-fg-color) !important;
+    }
+
+    .rec-dot{
+      box-shadow: 0 0 1px 3px var(--main-fg-color) !important;
+    }
+
+    .rec-dot:hover{
+      cursor: pointer !important;
+      box-shadow: 0 0 1px 3px var(--main-fg-color) !important;
+    }
+
+
+    .rec-arrow:hover{
+      background-color: var(--main-fg-color) !important;
+    }
+
+    .carousel-image{
+      width: 680px;
+    }
+
+    .rec-carousel{
+      height: 430px !important;
+    }
 }
 
 
@@ -335,6 +494,7 @@ body {
         position: absolute;
         background-color: var(--main-balck);
         width: 100%;
+        z-index: 100;
     }
 
     .mobile-nav>ul {
@@ -394,6 +554,7 @@ body {
         justify-content: center;
         align-items: center;
         margin: 3em 1em;
+        background-color: var(--sub-black);
     }
 
     .form>input {
@@ -428,13 +589,90 @@ body {
         cursor: pointer;
     }
 
-    .button> h3 > a{
-      color: var(--main-white);
-      text-decoration: none;
+    .button>h3>a {
+        color: var(--main-white);
+        text-decoration: none;
     }
 
-    .button:hover{
-      color: var(--main-balck);
-      background-color: var(--main-fg-color);
+    .button:hover {
+        color: var(--main-balck);
+        background-color: var(--main-fg-color);
     }
+
+    .event-card {
+        width: 350px;
+        border: 0.2em solid var(--main-fg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1em auto;
+        background-color: var(--sub-black);
+        border-radius: 0.5em;
+    }
+
+    .events {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-carousel {
+        display: flex;
+        width: 350px;
+        height: 200px;
+        transition: 0.5s;
+        border: 0.2em solid var(--main-fg-color);
+        margin: 2em auto;
+        border-radius: 0.8em;
+        box-shadow: 0.3em 0.3em 0.4em black;
+    }
+
+    .carousel-image{
+      width: 350px;
+      height: 200px;
+    }
+
+    .carousel-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corousel-container>div.button {
+        display: none;
+        width: 8em;
+        height: 3em;
+        box-shadow: 0.3em 0.3em 0.4em black;
+    }
+
+    .carousel-image{
+      width: 330px;
+    }
+
+    .rec-arrow{
+      display: none;
+    }
+
+    /*these properties are related to carousel*/
+
+    .rec-dot_active{
+      box-shadow: 0 0 1px 3px var(--main-fg-color) !important;
+      background-color: var(--main-fg-color) !important;
+    }
+
+    .rec-dot{
+      box-shadow: 0 0 1px 3px var(--main-fg-color) !important;
+    }
+
+    .rec-dot:hover{
+      cursor: pointer !important;
+      box-shadow: 0 0 1px 3px var(--main-fg-color) !important;
+    }
+
+    .rec-carousel{
+      height: 350px;
+    }
+
 }
