@@ -4,13 +4,17 @@ import './App.css';
 import MobileNav from './Components/MobileNav';
 import Login from './Components/Login';
 import Register from './Components/Register';
-import {Switch, Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Events from './Components/Events';
 import Home from './Components/Home';
+import { SuspenseWithPerf } from 'reactfire';
+
+
+
 
 function App() {
     return (
-      <React.Fragment>
+        <React.Fragment>
         <Navbar />
         <MobileNav />
         <Switch>
@@ -24,7 +28,9 @@ function App() {
               <Events />
             </Route>
             <Route path="/login">
-              <Login />
+              <SuspenseWithPerf fallback={<p>please Wait...</p>} traceId={'Logging In'}>
+                <Login />
+              </SuspenseWithPerf>
             </Route>
             <Route path="/register">
               <Register />
