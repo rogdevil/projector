@@ -28,6 +28,9 @@
     margin: 0;
 }
 
+
+
+
 a {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -35,6 +38,10 @@ a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+a::selection {
+    background: none;
 }
 
 body {
@@ -190,7 +197,7 @@ body {
         height: 500px;
         transition: 0.5s;
         border: 0.2em solid var(--main-fg-color);
-        margin: 1em auto;
+        margin: 8em auto;
         border-radius: 0.8em;
         box-shadow: 0.3em 0.3em 0.4em black;
     }
@@ -224,11 +231,43 @@ body {
     }
 
     .rec-carousel{
-      height: 530px !important;
+      height: 830px !important;
     }
 
     .carousel-image{
       width: 780px;
+    }
+
+    /* these are for home page */
+
+    .homepage-main-part {
+        display: flex;
+        flex-direction: row;
+        width: 1300px;
+        justify-content: space-between;
+        margin: 13em auto;
+        align-items: center;
+    }
+
+    .homepage-main-part-content>h1 {
+        color: var(--main-fg-color);
+        text-shadow: 0.2em 0.2em 0.2em var(--main-bg-color);
+        font-size: 3em;
+        margin-bottom: 0.3em;
+    }
+
+    .homepage-main-part-content {
+        width: 50em;
+        margin-right: 10em;
+    }
+
+    .homepage-main-part-content>span {
+        color: var(--main-white);
+        font-size: 1.2em;
+    }
+
+    .homepage-main-part-image > img {
+        width: 60em;
     }
 
 }
@@ -445,6 +484,39 @@ body {
     .rec-carousel{
       height: 430px !important;
     }
+
+    /* this is for our home page */
+    .homepage-main-part {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 750px;
+        justify-content: space-between;
+        margin: 13em auto;
+        align-items: center;
+    }
+
+    .homepage-main-part-content>h1 {
+        color: var(--main-fg-color);
+        text-shadow: 0.2em 0.2em 0.2em var(--main-bg-color);
+        font-size: 3em;
+        margin-bottom: 0.3em;
+    }
+
+    .homepage-main-part-content {
+        width: 30em;
+        margin-right: 10em;
+        text-align: center;
+        margin: 5em auto;
+    }
+
+    .homepage-main-part-content>span {
+        color: var(--main-white);
+        font-size: 1.2em;
+    }
+
+    .homepage-main-part-image > img {
+        width: 30em;
+    }
 }
 
 
@@ -638,6 +710,7 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        height: 20em;
     }
 
     .corousel-container>div.button {
@@ -673,6 +746,39 @@ body {
 
     .rec-carousel{
       height: 350px;
+    }
+
+     /* this is for our home page */
+     .homepage-main-part {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 350px;
+        justify-content: space-between;
+        margin: 5em auto;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .homepage-main-part-content>h1 {
+        color: var(--main-fg-color);
+        text-shadow: 0.2em 0.2em 0.2em var(--main-bg-color);
+        font-size:2em;
+        margin-bottom: 0.3em;
+    }
+
+    .homepage-main-part-content {
+        width: 350px;
+        text-align: center;
+        margin: 5em auto;
+    }
+
+    .homepage-main-part-content>span {
+        color: var(--main-white);
+        font-size: 1em;
+    }
+
+    .homepage-main-part-image > img {
+        width: 350px;
     }
 
 }

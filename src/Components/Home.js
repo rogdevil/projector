@@ -23,9 +23,9 @@ const Home = (props) => {
         	<div className="homepage-main-part">
         		<div className="homepage-main-part-content">
         			<h1>Youth Education and Support</h1>
-        			<span>We are </span>
+        			<span>We strive to provide better education for orphan children</span>
         		</div>
-        		<div className="homepage-main-part-image"></div>
+        		<div className="homepage-main-part-image"><img src={require('../images/login.svg')} alt="student" /></div>
         	</div>
 
         	<Button name="Logout" click={logout} src="/"/>

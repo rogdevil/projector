@@ -8,7 +8,7 @@ import { Switch, Route } from 'react-router-dom';
 import Events from './Components/Events';
 import Home from './Components/Home';
 import { SuspenseWithPerf } from 'reactfire';
-
+import ResetPassword from './Components/ResetPassword';
 
 
 
@@ -20,6 +20,9 @@ function App() {
         <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/resetpassword">
+              <ResetPassword />
             </Route>
             <Route path="/aboutus">
               <h1>About</h1>
