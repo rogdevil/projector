@@ -30,6 +30,7 @@ export default function Book() {
                 
             })           
         } else {
+
             alert("everything is working fine");
             firestore.collection('booking').add(DataToSend)
         }
@@ -44,11 +45,11 @@ export default function Book() {
                 <input type="date" placeholder="dd-mm-yyyy" className="booking-input" onChange={(event) => {setDate(event.target.value)}} />
                 <span style={{color: 'white', width: '100%'}}>
                     <p style={{margin: '0em 1em'}}>From -</p>
-                    <input type="time" className="booking-input" onChange={(event) => {setFrom(`${date} ${event.target.value}`)}} />
+                    <input type="time" className="booking-input" onChange={(event) => {setFrom(`${date.split("-").reverse().join("-")} ${event.target.value}`)}} />
                 </span>
                 <span style={{color: 'white', width: '100%'}}>
                     <p style={{margin: '0em 1em'}}>To -</p>
-                    <input type="time" className="booking-input" onChange={(event) => {setTo(`${date} ${event.target.value}`)}} />
+                    <input type="time" className="booking-input" onChange={(event) => {setTo(`${date.split("-").reverse().join("-")} ${event.target.value}`)}} />
                 </span>
                 <Button name="Submit" click={checkAndSubmit} />
             </div>
