@@ -91,8 +91,7 @@ body {
         transition: 0.3s;
     }
 
-    .nav-items>ul>li:hover,
-    :focus {
+    .nav-items>ul>li:hover {
         color: var(--main-balck);
         background-color: var(--main-fg-color);
     }
@@ -110,7 +109,6 @@ body {
 
     .button {
         color: var(--main-white);
-        width: 10em;
         text-align: center;
         margin: 1em;
         border-radius: 0.5em;
@@ -125,8 +123,7 @@ body {
         text-decoration: none;
     }
 
-    .button:hover,
-    :focus {
+    .button:hover {
         color: var(--sub-black);
         background-color: var(--main-fg-color);
     }
@@ -215,29 +212,6 @@ body {
         box-shadow: 0.3em 0.3em 0.4em black;
     }
 
-
-    /*these properties are related to carousel*/
-
-    .rec-arrow{
-      margin: 1em !important;
-    }
-
-    .rec-arrow:hover{
-      background-color: var(--main-fg-color) !important;
-    }
-
-    .rec-dot{
-      display: none;
-    }
-
-    .rec-carousel{
-      height: 830px !important;
-    }
-
-    .carousel-image{
-      width: 780px;
-    }
-
     /* these are for home page */
 
     .homepage-main-part {
@@ -257,7 +231,7 @@ body {
     }
 
     .homepage-main-part-content {
-        width: 50em;
+        width: 80em;
         margin-right: 10em;
     }
 
@@ -270,6 +244,93 @@ body {
         width: 60em;
     }
 
+    /* poperties related to booking page page */
+    .booking-page-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1em;
+        background-color: var(--sub-black);
+        border-radius: 0.5em;
+    }
+
+    .booking-container {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        justify-content: center;
+        margin: 2em auto;
+    }
+
+    .booking-input {
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+        background-color: var(--main-balck);
+        border: 0.15em solid var(--sub-black);
+        color: var(--main-fg-color);
+        margin: 1em;
+    }
+
+    .booking-input:hover {
+        border: 0.15em solid var(--main-fg-color);
+        box-shadow: 0.1em 0.1em 1em var(--sub-black);
+        outline: none;
+    }
+
+    .booking-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: min-content;
+        margin: 0 auto;
+        padding: 1em;
+        border: 0.15em solid;
+        border-radius: 0.5em;
+        color: var(--main-fg-color);
+        margin-top: 2em;
+    }
+
+    .booking-page:hover {
+        box-shadow: 0.1em 0.1em 2em var(--sub-black);
+    }
+
+    .schedule-table-header {
+        width: 400px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: var(--main-fg-color);
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 2fr;
+        gap: 1em;
+        margin: 2em auto;
+        text-align: center;
+    }
+
+    .schedule-table-results {
+        width: 400px;
+        font-size: 1rem;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 2fr;
+        gap: 1em;
+        margin: 2em auto;
+        text-align: center;
+    }
+
+    .schedule-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: min-content;
+        margin: 0 auto;
+        padding: 1em;
+        border: 0.15em solid;
+        border-radius: 0.5em;
+        color: var(--main-fg-color);
+        margin-top: 2em;
+    }
 }
 
 
@@ -331,8 +392,7 @@ body {
     }
 
 
-    .nav-items>ul>li:hover,
-    :focus {
+    .nav-items>ul>li:hover {
         color: var(--main-balck);
         background-color: var(--main-fg-color);
     }
@@ -555,15 +615,13 @@ body {
         border-radius: 1em;
     }
 
-    .hamburger:hover,
-    :focus {
+    .hamburger:hover {
         background-color: var(--main-balck);
         border-radius: 0.5em;
     }
 
     .mobile-nav {
-        display: none;
-        position: absolute;
+        display: flex;
         background-color: var(--main-balck);
         width: 100%;
         z-index: 100;
@@ -571,12 +629,11 @@ body {
 
     .mobile-nav>ul {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        flex-direction: row;
+        justify-content: center;
         list-style: none;
-        display: block;
         align-items: center;
-        height: 100%;
+        width: 100%;
     }
 
     .Navbar {
@@ -595,7 +652,7 @@ body {
     }
 
     .mobile-nav>ul>li {
-        margin: 3em;
+        margin: 1em;
         border: 0.15em solid var(--main-fg-color);
         padding: 0.5em 1em;
         border-radius: 0.5em;
@@ -603,8 +660,7 @@ body {
         text-align: center;
     }
 
-    .mobile-nav>ul>li:hover,
-    :focus {
+    .mobile-nav>ul>li:hover {
         color: var(--main-balck);
         background-color: var(--main-fg-color);
     }
@@ -652,7 +708,6 @@ body {
 
     .button {
         color: var(--main-white);
-        width: 10em;
         text-align: center;
         margin: 1em;
         border-radius: 0.5em;
@@ -779,6 +834,93 @@ body {
 
     .homepage-main-part-image > img {
         width: 350px;
+    }
+
+    .booking-page-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1em;
+        background-color: var(--sub-black);
+        border-radius: 0.5em;
+    }
+
+    .booking-container {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        justify-content: center;
+        margin: 2em auto;
+    }
+
+    .booking-input {
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+        background-color: var(--main-balck);
+        border: 0.15em solid var(--sub-black);
+        color: var(--main-fg-color);
+        margin: 1em;
+    }
+
+    .booking-input:hover {
+        border: 0.15em solid var(--main-fg-color);
+        box-shadow: 0.1em 0.1em 1em var(--sub-black);
+        outline: none;
+    }
+
+    .booking-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: min-content;
+        margin: 0 auto;
+        padding: 1em;
+        border: 0.15em solid;
+        border-radius: 0.5em;
+        color: var(--main-fg-color);
+        margin-top: 2em;
+    }
+
+    .booking-page:hover {
+        box-shadow: 0.1em 0.1em 2em var(--sub-black);
+    }
+
+    .schedule-table-header {
+        width: 400px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: var(--main-fg-color);
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 2fr;
+        gap: 1em;
+        margin: 2em auto;
+        text-align: center;
+    }
+
+    .schedule-table-results {
+        width: 400px;
+        font-size: 1rem;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 2fr;
+        gap: 1em;
+        margin: 2em auto;
+        text-align: center;
+    }
+
+    .schedule-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: min-content;
+        margin: 0 auto;
+        padding: 1em 0em;
+        border: 0.15em solid;
+        border-radius: 0.5em;
+        color: var(--main-fg-color);
+        margin-top: 2em;
     }
 
 }

@@ -19,13 +19,13 @@ const configuration ={
 
 
 ReactDOM.render(
-  <FirebaseAppProvider firebaseConfig={configuration}>
-  <SuspenseWithPerf fallback={<h2>Loading....</h2>}>
-  	<Router>
-    	<App />
-  	</Router>
-  	</ SuspenseWithPerf>
-  </ FirebaseAppProvider>,
+  	<FirebaseAppProvider firebaseConfig={configuration}>
+		<SuspenseWithPerf fallback={<h2>Loading....</h2>}>
+			<Router>
+				<App />
+			</Router>
+		</SuspenseWithPerf>
+  	</FirebaseAppProvider>,
   document.getElementById('root')
 );
 

@@ -2,9 +2,11 @@
 
 $(document).ready(() => {
 
+	
 	console.log("hello world")
 
-	$('.hamburger').on('click', ()=>{
+	$('#hamburger').on('click', ()=>{
+		console.log("clicked mobile menu")
 		if($('.mobile-nav').css('display') == "none")
 			$('.mobile-nav').show("slow")
 		else

@@ -17,6 +17,10 @@ const Login = (props) => {
 
     const login = () => {
         console.log("email");
+        if (password.length < 6) {
+            alert("Your password must be 6 character or more long");
+            return;
+        }
         auth.signInWithEmailAndPassword(email, password).then(() => {
             console.log("successful");
         }).catch(function(error) {
@@ -33,11 +37,17 @@ const Login = (props) => {
         <div>
             <div className="form">
                 <input placeholder="Email" value={email} onChange={event => setEmail(event.target.value)} type="email"/>
+
                 <input placeholder="Password" value={password} onChange={event => setPassword(event.target.value)} type="password" />
+
                 <p style={{fontSize: '0.7em'}}><Link to="/resetpassword" style={{color: 'blue'}}>forgot password ?</Link></p>
+
                 <Button name="Login" click={login} src={"/"} />
+
                 <span className="blue" onClick={()=>console.log('hello')} style={{fontWeight: "bold"}}>OR</span>
+
                 <Button name="Register"  src="/register"/>
+
                 <span style={{fontSize: "0.7em", color: "var(--main-white)"}}>*<Link to="/termsandconditions" style={{color: "blue"}}> terms and conditions</Link> apply</span>
             </div>
             <div className="sidebar">
