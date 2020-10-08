@@ -892,7 +892,7 @@ body {
         font-weight: bold;
         color: var(--main-fg-color);
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr 2fr 2fr;
         gap: 1em;
         margin: 2em auto;
         text-align: center;
@@ -903,7 +903,7 @@ body {
         font-size: 1rem;
         color: rgb(0, 0, 0);
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr 2fr 2fr;
         gap: 1em;
         margin: 2em auto;
         text-align: center;
