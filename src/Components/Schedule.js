@@ -15,10 +15,11 @@ export default function Schedule() {
             <div className="schedule-table-header">
                 <p>Class</p>
                 <p>Venue</p>
+                <p>Lecture</p>
                 <p>From</p>
                 <p>To</p>
             </div>
-            {data.map( data => <ScheduleEvent from={data.fE.kt.proto.mapValue.fields.from.stringValue} venue={data.fE.kt.proto.mapValue.fields.venue.stringValue} class={data.fE.kt.proto.mapValue.fields.class.stringValue} to={data.fE.kt.proto.mapValue.fields.to.stringValue} />)}
+            {data.map( data => <ScheduleEvent from={data.fE.kt.proto.mapValue.fields.from.stringValue} venue={data.fE.kt.proto.mapValue.fields.venue.stringValue} lecture={data.fE.kt.proto.mapValue.fields.lectureName.stringValue} class={data.fE.kt.proto.mapValue.fields.class.stringValue} to={data.fE.kt.proto.mapValue.fields.to.stringValue} />)}
         </div>
     )
 }

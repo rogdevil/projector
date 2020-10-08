@@ -5,6 +5,7 @@ export default function ScheduleEvent(props) {
         <div className="schedule-table-results">
             <p>{props.class}</p>
             <p>{props.venue}</p>
+            <p>{props.lecture}</p>
             <p>{props.from}</p>
             <p>{props.to}</p>
         </div>
