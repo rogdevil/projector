@@ -267,7 +267,7 @@ body {
         border-radius: 0.5em;
         background-color: var(--main-balck);
         border: 0.15em solid var(--sub-black);
-        color: var(--main-fg-color);
+        color: var(--main-white);
         margin: 1em;
     }
 
@@ -858,7 +858,7 @@ body {
         border-radius: 0.5em;
         background-color: var(--main-balck);
         border: 0.15em solid var(--sub-black);
-        color: var(--main-fg-color);
+        color: var(--main-white);
         margin: 1em;
     }
 
